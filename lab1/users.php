@@ -8,8 +8,8 @@
 
  spl_autoload_register('userLoad');
 
- use App\Classes\User;
- use App\Classes\SuperUser;
+ use MyProject\Classes\User;
+ use MyProject\Classes\SuperUser;
  
  $user1 = new User('Павел', 'koren12', 'DZL8pr');
  $user1->showInfo();
