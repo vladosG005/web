@@ -12,6 +12,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: f1176550.xsph.ru
-          username: f1176550@f1176550
+          username: f1176550
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./web/
