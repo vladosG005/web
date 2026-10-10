@@ -2,8 +2,8 @@
  declare(strict_types=1);
 
  function userLoad(): void {
-     require_once 'src/Classes/User.php';
-     require_once 'src/Classes/SuperUser.php';
+     require_once 'MyProject/Classes/User.php';
+     require_once 'MyProject/Classes/SuperUser.php';
  }
 
  spl_autoload_register('userLoad');
@@ -23,4 +23,3 @@
  $user = new SuperUser('Алексей', 'root',
  'N1Y1GXYgKYs7mB1T', 'Администратор');
  $user->showInfo();
- 
