@@ -22,11 +22,10 @@
      }
 
      /**
-      * Выводит имя, логин, пароль и роль суперпользователя.
+      * Выводит имя, логин, роль суперпользователя.
       */
      public function showInfo(): void {
          echo '<pre>Имя: ', $this->name, PHP_EOL, 'Логин: ', $this->login,
-         PHP_EOL, 'Пароль: ', $this->password, PHP_EOL,
-         'Роль: ', $this->role, '</pre>';
+         PHP_EOL, 'Роль: ', $this->role, '</pre>';
      }
  }
