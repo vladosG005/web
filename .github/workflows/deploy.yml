@@ -14,4 +14,4 @@ jobs:
           server: f1176550.xsph.ru
           username: f1176550@f1176550
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ./web
+          server-dir: ./web/
