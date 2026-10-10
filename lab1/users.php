@@ -23,3 +23,5 @@
  $user = new SuperUser('Алексей', 'root',
  'N1Y1GXYgKYs7mB1T', 'Администратор');
  $user->showInfo();
+
+ print_r($user->getInfo());

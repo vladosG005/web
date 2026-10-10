@@ -3,11 +3,12 @@
 
  namespace MyProject\Classes;
  require_once 'User.php';
+ require_once '../SuperUserInterface.php';
 
  /**
   * Класс, в котором хранятся имя, логин и роль суперпользователя.
   */
- class SuperUser extends User {
+ class SuperUser extends User implements SuperUserInterface {
      /**
       * Конструктор, принимающий имя, логин, пароль и роль суперпользователя.
       *
@@ -16,8 +17,8 @@
       * @param string $password Пароль суперпользователя.
       * @param string $role Роль суперпользователя.
       */
-     public function __construct(string $name, string $login, string $password,
-     public string $role) {
+     public function __construct(string $name, string $login,
+                                 string $password, public string $role) {
          parent::__construct($name, $login, $password);
      }
 
@@ -27,5 +28,16 @@
      public function showInfo(): void {
          echo '<pre>Имя: ', $this->name, PHP_EOL, 'Логин: ', $this->login,
          PHP_EOL, 'Роль: ', $this->role, '</pre>';
+     }
+
+     /**
+      * {@inheritDoc}
+      *
+      * Ключами массива являются названия публичных полей, а значениями —
+      * значения этих полей.
+      */
+     public function getInfo(): array {
+         return ['name' => $this->name, 'login' => $this->login,
+                 'role' => $this->role];
      }
  }
