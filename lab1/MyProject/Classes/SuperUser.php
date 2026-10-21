@@ -9,7 +9,7 @@
  /**
   * Класс, в котором хранятся имя, логин и роль суперпользователя.
   */
- class SuperUser extends User implements MyProject::SuperUserInterface {
+ class SuperUser extends User implements SuperUserInterface {
      /**
       * Конструктор, принимающий имя, логин, пароль и роль суперпользователя.
       *
