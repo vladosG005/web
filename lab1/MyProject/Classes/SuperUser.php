@@ -3,7 +3,7 @@
 
  namespace MyProject\Classes;
  require_once 'User.php';
- require_once '/../SuperUserInterface.php';
+ require_once __DIR__ . '/../SuperUserInterface.php';
 
  /**
   * Класс, в котором хранятся имя, логин и роль суперпользователя.
