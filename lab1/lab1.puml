@@ -1,0 +1,36 @@
+@startuml
+skinparam class {
+    BackgroundColor White
+    BorderColor #333
+    ArrowColor #333
+}
+
+abstract class AbstractUser {
+  # {abstract} showInfo()
+}
+
+class User {
+  + {static} instance_count: int
+  + name: string
+  + login: string
+  - password: string
+  + __construct(name, login, password)
+  + showInfo(): void [override]
+  + __destruct()
+}
+
+class SuperUser {
+  + {static} instance_count: int
+  + role: string
+  + showInfo(): void [override]
+  + getInfo(): array
+}
+
+interface SuperUserInterface {
+  + getInfo(): array
+}
+
+AbstractUser <|-- User
+User <|-- SuperUser
+SuperUserInterface <|.. SuperUser
+@enduml
