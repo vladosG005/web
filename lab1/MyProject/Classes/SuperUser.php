@@ -11,6 +11,12 @@
   */
  class SuperUser extends User implements SuperUserInterface {
      /**
+      * Количество созданных суперпользователей.
+      * @static
+      */
+     public static int instance_count = 0;
+
+     /**
       * Конструктор, принимающий имя, логин, пароль и роль суперпользователя.
       *
       * @param string $name Имя суперпользователя.
@@ -21,6 +27,7 @@
      public function __construct(string $name, string $login,
                                  string $password, public string $role) {
          parent::__construct($name, $login, $password);
+         instance_count++;
      }
 
      /**

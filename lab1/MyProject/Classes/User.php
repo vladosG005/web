@@ -9,6 +9,12 @@
   */
  class User extends AbstractUser {
      /**
+      * Количество созданных пользователей.
+      * @static
+      */
+     public static int instance_count = 0;
+
+     /**
       * Конструктор, принимающий имя, логин, пароль пользователя.
       *
       * @param string $name Имя пользователя.
@@ -16,7 +22,9 @@
       * @param string $password Пароль пользователя.
       */
      public function __construct(public string $name, public string $login,
-     private string $password) {}
+     private string $password) {
+         instance_count++;
+     }
 
      /**
       * Выводит имя, логин и пароль пользователя.

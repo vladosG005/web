@@ -26,4 +26,7 @@
  
  echo '<pre>';
  print_r($user->getInfo());
+ 
+ echo 'Всего обычных пользователей: ' . User::$instance_count . PHP_EOL .
+      'Всего суперпользователей: ' . SuperUser::$instance_count . PHP_EOL;
  echo '</pre>';
