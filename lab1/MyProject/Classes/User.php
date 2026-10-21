@@ -12,7 +12,7 @@
       * Количество созданных пользователей.
       * @static
       */
-     public static int instance_count = 0;
+     public static int $instance_count = 0;
 
      /**
       * Конструктор, принимающий имя, логин, пароль пользователя.
