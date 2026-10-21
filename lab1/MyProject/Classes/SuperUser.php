@@ -27,7 +27,7 @@
      public function __construct(string $name, string $login,
                                  string $password, public string $role) {
          parent::__construct($name, $login, $password);
-         $instance_count++;
+         self::$instance_count++;
      }
 
      /**

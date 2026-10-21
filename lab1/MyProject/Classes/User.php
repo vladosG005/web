@@ -23,7 +23,7 @@
       */
      public function __construct(public string $name, public string $login,
      private string $password) {
-         $instance_count++;
+         self::$instance_count++;
      }
 
      /**
