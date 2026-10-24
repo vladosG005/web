@@ -12,7 +12,7 @@
       * Количество созданных пользователей.
       * @static
       */
-     public static int $instance_count = 0;
+     public static int $instanceCount = 0;
 
      /**
       * Конструктор, принимающий имя, логин, пароль пользователя.
@@ -23,7 +23,7 @@
       */
      public function __construct(public string $name, public string $login,
      private string $password) {
-         self::$instance_count++;
+         self::$instanceCount++;
      }
 
      /**

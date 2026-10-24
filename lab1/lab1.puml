@@ -10,7 +10,7 @@ abstract class AbstractUser {
 }
 
 class User {
-  + {static} instance_count: int
+  + {static} instanceCount: int
   + name: string
   + login: string
   - password: string
@@ -20,7 +20,7 @@ class User {
 }
 
 class SuperUser {
-  + {static} instance_count: int
+  + {static} instanceCount: int
   + role: string
   + showInfo(): void [override]
   + getInfo(): array

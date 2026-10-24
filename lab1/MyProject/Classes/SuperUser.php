@@ -14,7 +14,7 @@
       * Количество созданных суперпользователей.
       * @static
       */
-     public static int $instance_count = 0;
+     public static int $instanceCount = 0;
 
      /**
       * Конструктор, принимающий имя, логин, пароль и роль суперпользователя.
@@ -27,8 +27,8 @@
      public function __construct(string $name, string $login,
                                  string $password, public string $role) {
          parent::__construct($name, $login, $password);
-         parent::$instance_count--;
-         self::$instance_count++;
+         parent::$instanceCount--;
+         self::$instanceCount++;
      }
 
      /**
