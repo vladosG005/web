@@ -1,14 +1,15 @@
 <?php
  declare(strict_types=1);
 
- use MyProject\Classes\User;
- use MyProject\Classes\SuperUser;
-
- function userLoad(string $class_name): void {
-     require_once str_replace('\\', '/', $class_name) . '.php';
+ function userLoad(): void {
+     require_once 'MyProject/Classes/User.php';
+     require_once 'MyProject/Classes/SuperUser.php';
  }
 
  spl_autoload_register('userLoad');
+
+ use MyProject\Classes\User;
+ use MyProject\Classes\SuperUser;
  
  $user1 = new User('Павел', 'koren12', 'DZL8pr');
  $user1->showInfo();
