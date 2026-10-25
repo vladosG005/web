@@ -5,7 +5,7 @@
  use MyProject\Classes\SuperUser;
 
  function userLoad(string $class_name): void {
-     require_once 'MyProject/Classes/' . $class_name . '.php';
+     require_once str_replace('\\', '/', $class_name) . '.php';
  }
 
  spl_autoload_register('userLoad');
