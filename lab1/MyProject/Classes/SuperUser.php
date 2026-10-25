@@ -2,8 +2,6 @@
  declare(strict_types=1);
 
  namespace MyProject\Classes;
- require_once 'User.php';
- require_once __DIR__ . '/../SuperUserInterface.php';
  use MyProject\SuperUserInterface;
 
  /**

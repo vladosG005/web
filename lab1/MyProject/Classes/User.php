@@ -2,7 +2,6 @@
  declare(strict_types=1);
 
  namespace MyProject\Classes;
- require_once 'AbstractUser.php';
 
  /**
   * Класс, в котором хранятся имя, логин и пароль пользователя.

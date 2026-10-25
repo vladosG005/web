@@ -1,9 +1,8 @@
 <?php
  declare(strict_types=1);
 
- function userLoad(): void {
-     require_once 'MyProject/Classes/User.php';
-     require_once 'MyProject/Classes/SuperUser.php';
+ function userLoad(string $class_name): void {
+     require_once $class_name . '.php';
  }
 
  spl_autoload_register('userLoad');
