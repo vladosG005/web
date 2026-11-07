@@ -7,6 +7,7 @@ class MarkdownView extends ViewFactory
       # {{{title}}}
       {{{listItems}}}
 MD;
+
     protected $replacements;
 
     public function __construct(object $decorator)

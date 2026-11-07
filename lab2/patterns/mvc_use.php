@@ -5,5 +5,5 @@ use MVC\Controllers\Controller;
 
 //$obj = new Controller('users.rss');
 //$obj = new Controller('users/1.html');
-$obj = new Controller('users.md');
+$obj = new Controller('users.markdown');
 echo $obj->render();
