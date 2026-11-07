@@ -1,4 +1,6 @@
 <?php
+require_once 'INewsDB.class.php';
+
 /**
  *  Класс для работы с базой данных новостей
 */
