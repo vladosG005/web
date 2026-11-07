@@ -14,7 +14,7 @@ MD;
     {
         $this->replacements = [
             '{{{title}}}' => $decorator->title(),
-            '{{{items}}}' => $decorator->listItems()
+            '{{{listItems}}}' => $decorator->listItems()
         ];
     }
 
