@@ -45,6 +45,6 @@ class UserDecorator extends DecoratorFactory
                htmlspecialchars($this->title()) .
                ' (' .
                htmlspecialchars($this->user->email) .
-               ')';
+               ')' . PHP_EOL;
     }
 }
