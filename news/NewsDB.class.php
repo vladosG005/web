@@ -26,12 +26,12 @@ class NewsDB implements INewsDB {
      *  Конструктор, записывающий в поле $_db новый экземпляр класса SQLite3 и
      *  открывающий соединение с базой данных под названием DB_NAME
     */
-    __construct() {
+    function __construct() {
         $_db = new SQLite3(DB_NAME);
     }
 
     function saveNews($title, $category, $description, $source) {
-        
+
     }
 	
 	function getNews() {
@@ -46,7 +46,7 @@ class NewsDB implements INewsDB {
      *  Деструктор, закрывающий соединение с базой данных и
      *  удаляющий объект $_db
     */
-    __destruct() {
+    function __destruct() {
         $_db->close();
         unset($_db);
     }
