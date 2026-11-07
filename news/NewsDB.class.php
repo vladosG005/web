@@ -50,8 +50,8 @@ class NewsDB implements INewsDB {
      *  удаляющий объект $_db
     */
     function __destruct() {
-        $_db->close();
-        unset($_db);
+        self::$_db->close();
+        unset(self::$_db);
     }
 }
 
