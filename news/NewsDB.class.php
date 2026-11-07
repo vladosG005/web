@@ -2,7 +2,8 @@
 require_once 'INewsDB.class.php';
 
 /**
- *  Класс для работы с базой данных новостей
+ *  class NewsDB
+ *  для работы с базой данных новостей
 */
 class NewsDB implements INewsDB {
     /**
@@ -29,7 +30,7 @@ class NewsDB implements INewsDB {
      *  открывающий соединение с базой данных под названием DB_NAME
     */
     function __construct() {
-        $_db = new SQLite3(DB_NAME);
+        $_db = new SQLite3(self::DB_NAME);
     }
 
     function saveNews($title, $category, $description, $source) {
