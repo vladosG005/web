@@ -22,7 +22,7 @@ class NewsDB implements INewsDB {
      *  @return SQLite3 $_db
     */
     protected function get_db() {
-        return $this->$_db;
+        return $this->_db;
     }
 
     /**
@@ -30,7 +30,7 @@ class NewsDB implements INewsDB {
      *  открывающий соединение с базой данных под названием DB_NAME
     */
     function __construct() {
-        $this->$_db = new SQLite3(self::DB_NAME);
+        $this->_db = new SQLite3(self::DB_NAME);
     }
 
     function saveNews($title, $category, $description, $source) {
