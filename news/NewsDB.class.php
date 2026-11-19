@@ -30,6 +30,12 @@ class NewsDB implements INewsDB {
      *  открывающий соединение с базой данных под названием DB_NAME
     */
     function __construct() {
+        if (1) {
+
+        }
+        else {
+            
+        }
         $this->_db = new SQLite3(self::DB_NAME);
     }
 
