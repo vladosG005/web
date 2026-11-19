@@ -21,8 +21,8 @@ class NewsDB implements INewsDB {
      *  
      *  @return SQLite3 $_db
     */
-    protected function get() {
-        return $_db;
+    protected function get_db() {
+        return $this->$_db;
     }
 
     /**
