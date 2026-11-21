@@ -73,5 +73,3 @@ class NewsDB implements INewsDB {
         unset($this->_db);
     }
 }
-
-$news = new NewsDB();
