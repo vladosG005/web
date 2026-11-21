@@ -37,10 +37,11 @@ class NewsDB implements INewsDB {
             $this->_db = new SQLite3(self::DB_NAME);
             $fp = fopen('news.txt', 'r');
             $query = '';
-            
+
             while (($buffer = fgets($fp, 4096)) !== false) {
                 if (str_starts_with($buffer, '#')) {
                     $this->_db->exec($query);
+                    $query = '';
                 }
                 else {
                     $query .= $buffer;
