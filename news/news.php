@@ -2,7 +2,6 @@
 require_once 'NewsDB.class.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require_once 'save_news.inc.php';
-    echo 'form was sent';
 }
 
 $news = new NewsDB();

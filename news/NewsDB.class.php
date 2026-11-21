@@ -53,7 +53,11 @@ class NewsDB implements INewsDB {
     }
 
     function saveNews($title, $category, $description, $source) {
-
+        $dt = time();
+        $this->_db->exec("INSERT INTO msgs(title, category, description,
+                          source, datetime) VALUES($title, $category,
+                          $description, $source, $dt)");
+        
     }
 	
 	function getNews() {
