@@ -30,13 +30,23 @@ class NewsDB implements INewsDB {
      *  открывающий соединение с базой данных под названием DB_NAME
     */
     function __construct() {
-        if (1) {
-
+        if (file_exists(self::DB_NAME)) {
+            $this->_db = new SQLite3(self::DB_NAME);
         }
         else {
+            $this->_db = new SQLite3(self::DB_NAME);
+            $fp = fopen('news.txt', 'r');
+            $query = '';
             
+            while (($buffer = fgets($fp, 4096)) !== false) {
+                if (str_starts_with($buffer, '#')) {
+                    $this->_db->exec($query);
+                }
+                else {
+                    $query .= $buffer;
+                }
+            }
         }
-        $this->_db = new SQLite3(self::DB_NAME);
     }
 
     function saveNews($title, $category, $description, $source) {
