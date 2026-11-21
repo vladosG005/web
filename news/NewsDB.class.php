@@ -47,6 +47,8 @@ class NewsDB implements INewsDB {
                     $query .= $buffer;
                 }
             }
+
+            fclose($fp);
         }
     }
 
