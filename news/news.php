@@ -1,11 +1,12 @@
 <?php
 require_once 'NewsDB.class.php';
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require_once 'save_news.inc.php';
-}
 
 $news = new NewsDB();
 $errMsg = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require_once 'save_news.inc.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
