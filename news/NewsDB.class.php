@@ -59,8 +59,8 @@ class NewsDB implements INewsDB {
         $dt = time();
         echo "$title, $category, $description, $source, $dt" . PHP_EOL;
         return $this->_db->exec("INSERT INTO msgs(title, category,
-                                 description, source, datetime) VALUES($title,
-                                 $category, $description, $source, $dt)");
+                                 description, source, datetime) VALUES('$title',
+                                 $category, '$description', '$source', $dt)");
     }
 	
 	function getNews() {
