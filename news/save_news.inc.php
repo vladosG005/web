@@ -4,7 +4,7 @@ $category = $_POST['category'];
 $description = $_POST['description'];
 $source = $_POST['source'];
 
-if ($title && $category && $description && $source)) {
+if ($title && $category && $description && $source) {
     $title = trim($title);
     $description = trim($description);
     $source = trim($source);
