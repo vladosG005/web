@@ -52,12 +52,14 @@ class NewsDB implements INewsDB {
         }
     }
 
+    /**
+     * {@inheritDoc}
+    */
     function saveNews($title, $category, $description, $source) {
         $dt = time();
-        $this->_db->exec("INSERT INTO msgs(title, category, description,
-                          source, datetime) VALUES($title, $category,
-                          $description, $source, $dt)");
-        
+        return $this->_db->exec("INSERT INTO msgs(title, category,
+                                 description, source, datetime) VALUES($title,
+                                 $category, $description, $source, $dt)");
     }
 	
 	function getNews() {
